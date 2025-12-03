@@ -17,9 +17,7 @@ Building "muscle memory" for Scene navigation using the **QWERTY** layout:
 
 
 | Key | Tool | Technical Name | Function |
-
-| :---: | :--- | :--- | :--- |
-
+| :---| :---|:---|
 | **Q** | Hand | **Pan / View** | Navigate the scene without affecting objects. |
 
 | **W** | Arrows | **Move** | Translation (Move along X, Y, Z axes). |
@@ -118,4 +116,35 @@ Understanding the building blocks of Unity and how to scale development using te
     3. *Tip:* Adjust the "3D Icons" slider if labels are too big/small. 
 
 
+## Module 5: Assets & Package Management
+
+Managing external recourses and plugins.
+
+| Tool | Function | Mental Model (Analogy) |
+| :--- | :--- | :--- |
+| **Asset Store** | The marketplace to download 3D models, sounds, and tools. | ** The Shopping Mall.** You go there to buy ingredients or furniture.
+| **Package Manager** | The internal tool to install/update Unity features(like ProBuilder, URP/HDRP). |
+| **Importing** | Bringing files into the project. | **Unpacking:** Taking the furnitune out of the box and putting it in the living room. |
+
+---
+
+# Module 6: Materials & Variants ( Visual Inheritance)
+
+Understanding how to manage textures and colors efficiently using inheritance.
+
+| Concept | Definition | Metal Model ( Analogy) |
+| :--- | :--- | :---  |
+| **Material** | Defines how an object looks (Color, Shininess, Textures). | **The Paint Bucket:** Applying "Red Glossy Paint" to a car. |
+| **Material Variant** | A child material that inherits properties from a Parent Material but can have specific overrides. |**The Uniform:** "Base Uniform" is black. "Manager Uniform" inherits the black fabric but overrides the button color to Gold. |
+| **Hierarchy Logic** | Parent changes affect all Children. Child changes only affect the Child. | **The DNA:** If the father changes species, the son changes. If the son dyes hair, the father stays the same. |
+
+---
+
+## Module 7: Overrides & Prefab Management
+
+Handling exceptions in the Prefab workflow.
+
+* **The "+" Icon:** Indicates a **Local Override**. The object has modifications specific to *this scene* that are not in the original Prefab.
+* **Apply All:** Pushes the local changes back to the Master Prefab (updates the "Factory Blueprint").
+* **Revert All:** Discards local changes and resets the object to match the Master Prefab.  
 
