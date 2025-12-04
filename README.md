@@ -128,7 +128,7 @@ Managing external recourses and plugins.
 
 ---
 
-# Module 6: Materials & Variants ( Visual Inheritance)
+## Module 6: Materials & Variants ( Visual Inheritance)
 
 Understanding how to manage textures and colors efficiently using inheritance.
 
@@ -139,6 +139,18 @@ Understanding how to manage textures and colors efficiently using inheritance.
 | **Hierarchy Logic** | Parent changes affect all Children. Child changes only affect the Child. | **The DNA:** If the father changes species, the son changes. If the son dyes hair, the father stays the same. |
 
 ---
+## Module 6.1: DevOps & Cloud Workflow
+
+Professional workflow for version control and automated builds.
+
+| Concept | Definition | Flow Analogy |
+| :--- | :--- | :--- |
+| **Unity Version Control** | The system that tracks changes (like Git but optimized for big files). | **The Time Machine:** Lets you undo mistakes or travel back to a working version. |
+| **Cloud Build** | A server that builds the game (`.exe` / `.apk`) for you. | **The Factory:** You send the blueprints (Code), and the factory delivers the finished product (Game) while you keep working. |
+| **LTS** | **Long Term Support** version. | **The Foundation:** A stable version of Unity that won't change or break features for 2+ years. |
+
+---
+
 
 ## Module 7: Overrides & Prefab Management
 
@@ -147,4 +159,41 @@ Handling exceptions in the Prefab workflow.
 * **The "+" Icon:** Indicates a **Local Override**. The object has modifications specific to *this scene* that are not in the original Prefab.
 * **Apply All:** Pushes the local changes back to the Master Prefab (updates the "Factory Blueprint").
 * **Revert All:** Discards local changes and resets the object to match the Master Prefab.  
+
+## Module 9: Data Persistence (PlayerPrefers)
+
+Saving simple data ( High Score, Settings, Last Position) so it survives after the game closes.
+
+| Command | Syntax Example | Mental Model ( Analogy) |
+| :--- | :--- | :--- | 
+| **Set(Save)** | `PlayerPrefs.SetFloat("Key", Value) ;` | **Writing in the Notebook:** You write down the number so you don't forget. |
+| **Get (Load)** | `PlayerPrefs.GetFloat("Key" Default);` | **Reading the Notebook:** You look for the page "Key". |
+| **Default Value** | `GetFloat("Score", 0 );` | **The Fallback:** if the page is blank (first time playing ), assume the score is 0. |
+
+---
+## Module 10: Performance & Optimization
+
+Ensuring the game runs smoothly (Target: 60 FPS).
+
+| Tool | Path | Function | Mental Model (Analogy) |
+| :--- | :--- | :--- | :--- |
+| **Profiler** | `Window > Analysis > Profiler` | Analyzes CPU, GPU, and Memory usage frame by frame. | **The Medical Scan:** Shows exactly which organ (script/physics) is sick/slow. |
+| **Frame Debugger** | `Window > Analysis > Frame Debugger` | Pauses a single frame to see how it's drawn layer by layer. | **The Slow-Motion Replay:** Lets you see if you are drawing things you don't need (like invisible walls). |
+| **Stats** | `Game View > Stats` | Quick overlay showing current FPS and Batches. | **The Speedometer:** A quick check to see how fast you are going. |
+
+* **Key Metric:** **60 FPS** (Frames Per Second) is the gold standard for smooth gameplay.
+* **Green Spike in Profiler:** Usually indicates **Rendering** issues (Textures too big, too many lights).
+
+---
+
+## Module 11: Tools & Recording
+
+Essential tools for Game Design documentation.
+
+* **Unity Recorder:** An add-on to record gameplay directly inside the engine without losing quality.
+    * *Use Case:* Creating trailers or debugging physics glitches.
+* **Static Objects:** Checking the `Static` box tells Unity "This object never moves".
+    * *Benefit:* Unity pre-calculates lighting and physics, saving massive CPU power.
+
+---
 
