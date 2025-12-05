@@ -197,3 +197,27 @@ Essential tools for Game Design documentation.
 
 ---
 
+## Module 12: Cinemachine (Camera System)
+
+Advanced camera control without writing code.
+
+| Component | Function | Mental Model (Analogy) |
+| :--- | :--- | :--- |
+| **Virtual Camera** | Calculates where the camera *should* be. | **The Gimbal / Drone:** It's not a camera (it has no lens). It's a robotic arm that flies around. |
+| **Cinemachine Brain** | Links the Main Camera to the Virtual Cameras. | **The Pilot:** He sits inside the Main Camera and steers it to match the Gimbal's position instantly. |
+| **Follow** | Determines the target position (X, Y, Z). | **The Leash:** Pulls the camera along with the target object. |
+| **Look At** | Determines the target rotation (Angle). | **The Head:** Keeps the camera's "eyes" locked on a specific point. |
+| **Priority** | Determines which Virtual Camera is active. | **The Loudest Voice:** The camera with the highest number (e.g., 15 vs 10) wins control. |
+
+---
+
+## Module 13: Animation Systems
+
+Bringing objects to life via Keyframes, State Machines, or Code.
+
+| Tool | Type | Use Case | Mental Model (Analogy) |
+| :--- | :--- | :--- | :--- |
+| **Animation (Clip)** | Legacy / Linear | Simple movements (Door opening, Platform moving). | **The Tape:** A recorded sequence of frames. Like a GIF. |
+| **Animator** | State Machine | Complex character logic (Walk -> Run -> Jump). | **The Flowchart:** The "Brain" that decides *which* Tape to play based on conditions (Parameters). |
+| **Keyframe** | Data Point | A snapshot of properties (Position, Scale) at a specific time. | **The Pose:** "At second 0, stand here. At second 1, stand there." |
+| **DOTween** | Code (C#) | Smooth, mathematical transitions (UI Fading, Popups). | **Telekinesis:** Moving things using pure math formulas (Easing) instead of manual recordings. |
