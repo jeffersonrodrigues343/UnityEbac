@@ -224,7 +224,7 @@ Bringing objects to life via Keyframes, State Machines, or Code.
 
 ---
 
-## 6 - WHAT ARE VARIABLES?
+## MODULE 14:  WHAT ARE VARIABLES?
 
 **It is a MEMORY ALLOCATION.**
 
