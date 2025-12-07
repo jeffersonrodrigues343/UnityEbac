@@ -1,0 +1,31 @@
+# Unity generated folders
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# Visual Studio / VS Code cache (O que estava travando)
+.vs/
+.vscode/
+.vsconfig
+*.sln
+*.csproj
+*.unityproj
+*.slnx
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opentdb
+*.inpidb
+
+# OS generated
+.DS_Store
+Thumbs.db
