@@ -221,3 +221,49 @@ Bringing objects to life via Keyframes, State Machines, or Code.
 | **Animator** | State Machine | Complex character logic (Walk -> Run -> Jump). | **The Flowchart:** The "Brain" that decides *which* Tape to play based on conditions (Parameters). |
 | **Keyframe** | Data Point | A snapshot of properties (Position, Scale) at a specific time. | **The Pose:** "At second 0, stand here. At second 1, stand there." |
 | **DOTween** | Code (C#) | Smooth, mathematical transitions (UI Fading, Popups). | **Telekinesis:** Moving things using pure math formulas (Easing) instead of manual recordings. |
+
+---
+
+## 6 - WHAT ARE VARIABLES?
+
+**It is a MEMORY ALLOCATION.**
+
+### Types of Vars
+* `Int Level = 1;` -> Integer (`Int Doors = 4`)
+* `Float Life = 1.0;` -> Floating point, accepts broken numbers.
+    * *C#* -> `Float Name = xf;` (A declaration of a broken value).
+* `Bool HasGun = false;` -> Boolean Logic (True or False).
+
+### Variable Visibility (Types)
+
+| **PRIVATE** | **PUBLIC** | **PROTECTED** |
+| :--- | :--- | :--- |
+| **Not Visible.** | **Visible.** | **Visible only with Inheritance.** |
+| Accessed only by the class itself. | Accessed through all classes. | Only classes that use Inheritance have access. |
+| *Symbol:* `_name` (Underscore -> Way to filter). | | |
+
+---
+
+## # C# STRUCTURE
+
+1.  **Part 1: The Toolboxes** (`using UnityEngine;`)
+2.  **Part 2: The Badge/ID (Who am I)** (`public class ...`)
+    * *File Name and Object Definition.* (The Class name must match the file).
+3.  **Part 3: The Filling (Data and Actions)**
+    * *Everything that happens in the game stays inside brackets `{}`.*
+    * **Functions and Methods:** They are Orders / Instructions.
+    * `Start {}` -> Preparations.
+    * `Update {}` -> Action.
+
+---
+
+## # OOP CONCEPT (Object Oriented)
+
+**What is it?** One of the goals is to be **SCALABLE**.
+> **"Drawer Organization"**
+
+```csharp
+Class Name {
+   - Attributes
+   - Methods
+};
