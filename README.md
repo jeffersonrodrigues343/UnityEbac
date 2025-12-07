@@ -244,7 +244,7 @@ Bringing objects to life via Keyframes, State Machines, or Code.
 
 ---
 
-## # C# STRUCTURE
+###  C# STRUCTURE
 
 1.  **Part 1: The Toolboxes** (`using UnityEngine;`)
 2.  **Part 2: The Badge/ID (Who am I)** (`public class ...`)
