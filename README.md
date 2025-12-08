@@ -115,6 +115,7 @@ Understanding the building blocks of Unity and how to scale development using te
     2. Scene View: Click the **Gizmos Globe** (Top Right) to toggle visibility.
     3. *Tip:* Adjust the "3D Icons" slider if labels are too big/small. 
 
+---
 
 ## Module 5: Assets & Package Management
 
@@ -151,7 +152,6 @@ Professional workflow for version control and automated builds.
 
 ---
 
-
 ## Module 7: Overrides & Prefab Management
 
 Handling exceptions in the Prefab workflow.
@@ -159,6 +159,8 @@ Handling exceptions in the Prefab workflow.
 * **The "+" Icon:** Indicates a **Local Override**. The object has modifications specific to *this scene* that are not in the original Prefab.
 * **Apply All:** Pushes the local changes back to the Master Prefab (updates the "Factory Blueprint").
 * **Revert All:** Discards local changes and resets the object to match the Master Prefab.  
+
+---
 
 ## Module 9: Data Persistence (PlayerPrefers)
 
@@ -171,6 +173,7 @@ Saving simple data ( High Score, Settings, Last Position) so it survives after t
 | **Default Value** | `GetFloat("Score", 0 );` | **The Fallback:** if the page is blank (first time playing ), assume the score is 0. |
 
 ---
+
 ## Module 10: Performance & Optimization
 
 Ensuring the game runs smoothly (Target: 60 FPS).
