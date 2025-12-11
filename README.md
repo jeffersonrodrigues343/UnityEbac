@@ -1,94 +1,55 @@
-
 # EBAC Unity & Game Dev Journey 
 
-
 This repository documents my learning journey through the **Game Development Course by EBAC**.
-
 Here, I apply core concepts of **C#**, **Unity Engine**, and **Game Design** patterns.
-
 
 ---
 
-
-##  Manipulation Shortcuts (Tools)
-
-
+## 🎮 Manipulation Shortcuts (Tools)
 Building "muscle memory" for Scene navigation using the **QWERTY** layout:
-
 
 | Key | Tool | Technical Name | Function |
 | :---| :---|:---|
 | **Q** | Hand | **Pan / View** | Navigate the scene without affecting objects. |
-
 | **W** | Arrows | **Move** | Translation (Move along X, Y, Z axes). |
-
 | **E** | Circles | **Rotate** | Object rotation. |
-
 | **R** | Block | **Scale** | Resize object dimensions. |
-
 | **T** | Rectangle | **Rect Tool** | UI and 2D Sprite adjustments. |
-
 | **Y** | All | **Transform** | Move, Rotate, and Scale simultaneously. |
 
-
 ---
-
 
 ## Interface Structure
-
-
 Core concepts of the Unity Workspace:
 
-
 * **Scene:** The "film set". Where we build the world level.
-
 * **Hierarchy:** The list of GameObjects currently **active** in the scene.
-
 * **Project:** The file cabinet. Contains all assets, scripts, and materials (The ingredients).
-
 * **Inspector:** Displays detailed properties and components of the selected object.
-
 * **Console:** Output for logs, warnings, and debug errors.
-
 
 ---
 
-
 ## Module 3: Primitives & Lighting
-
-
 Notes on handling basic 3D objects, coordinate systems, and scene illumination.
 
+![Lighting Notes](./Lights%20on%20and%20shadows.png)
 
-![Lighting Notes](./Lights on and shadows.png)
-
-
-###  Primitives & Coordinates
-
+### 🧊 Primitives & Coordinates
 * **Primitives:** Basic 3D shapes provided by Unity (Cube, Sphere, Capsule, Plane).
-
 * **Coordinate Systems (Position):**
-
     * **Local Space:** Position relative to the **Parent** object (Child/Local).
-
     * **World Space:** Position relative to the **Global** scene origin (General).
 
-
 ### Lighting System
-
 * **Directional Light:** Simulates the **Sun**. Infinite distance, affects the entire scene globally.
-
 * **Point Light:** Spherical light source. Illuminates objects within a specific range/radius (like a lightbulb).
-
 * **Properties:** Manipulation of Light Color (e.g., Blue/Green setup) and Intensity.
-
 * **Shadows:** Configuration of Shadow Types (Hard vs. Soft).
-
 
 ---
 
 ### Module 4: Game Objects & Prefabs
-
 Understanding the building blocks of Unity and how to scale development using templates.
 
 | Concept | Technical Definition | Mental Model (Analogy) |
@@ -105,8 +66,9 @@ Understanding the building blocks of Unity and how to scale development using te
 
 #### 1. Creating a Prefab
 * **Action:** Drag a Game Object from **Hierarchy** > Drop into **Project Folder**.
-* **Visual Cue:** The Icon in Hyerarchy turns **blue** (Linked to Prefab).
-* **Best Practice:** Awalys edit the *Prefab Asset* (in the folder ) to update all instance at once.
+* **Visual Cue:** The Icon in Hierarchy turns **blue** (Linked to Prefab).
+* **Best Practice:** Always edit the *Prefab Asset* (in the folder) to update all instances at once.
+
 #### 2. Visual Labels (Gizmos)
 * **Problem:** Hard to find invisible objects (like Lights or Logic Managers) in the Scene.
 * **Solution:** Use **Gizmo Icons** (The colored bubbles).
@@ -118,30 +80,28 @@ Understanding the building blocks of Unity and how to scale development using te
 ---
 
 ## Module 5: Assets & Package Management
-
-Managing external recourses and plugins.
+Managing external resources and plugins.
 
 | Tool | Function | Mental Model (Analogy) |
 | :--- | :--- | :--- |
-| **Asset Store** | The marketplace to download 3D models, sounds, and tools. | ** The Shopping Mall.** You go there to buy ingredients or furniture.
-| **Package Manager** | The internal tool to install/update Unity features(like ProBuilder, URP/HDRP). |
-| **Importing** | Bringing files into the project. | **Unpacking:** Taking the furnitune out of the box and putting it in the living room. |
+| **Asset Store** | The marketplace to download 3D models, sounds, and tools. | **The Shopping Mall.** You go there to buy ingredients or furniture. |
+| **Package Manager** | The internal tool to install/update Unity features (like ProBuilder, URP/HDRP). | **The Toolbox:** Where you get specialized tools. |
+| **Importing** | Bringing files into the project. | **Unpacking:** Taking the furniture out of the box and putting it in the living room. |
 
 ---
 
-## Module 6: Materials & Variants ( Visual Inheritance)
-
+## Module 6: Materials & Variants (Visual Inheritance)
 Understanding how to manage textures and colors efficiently using inheritance.
 
-| Concept | Definition | Metal Model ( Analogy) |
+| Concept | Definition | Mental Model (Analogy) |
 | :--- | :--- | :---  |
 | **Material** | Defines how an object looks (Color, Shininess, Textures). | **The Paint Bucket:** Applying "Red Glossy Paint" to a car. |
-| **Material Variant** | A child material that inherits properties from a Parent Material but can have specific overrides. |**The Uniform:** "Base Uniform" is black. "Manager Uniform" inherits the black fabric but overrides the button color to Gold. |
+| **Material Variant** | A child material that inherits properties from a Parent Material but can have specific overrides. | **The Uniform:** "Base Uniform" is black. "Manager Uniform" inherits the black fabric but overrides the button color to Gold. |
 | **Hierarchy Logic** | Parent changes affect all Children. Child changes only affect the Child. | **The DNA:** If the father changes species, the son changes. If the son dyes hair, the father stays the same. |
 
 ---
-## Module 6.1: DevOps & Cloud Workflow
 
+## Module 6.1: DevOps & Cloud Workflow
 Professional workflow for version control and automated builds.
 
 | Concept | Definition | Flow Analogy |
@@ -153,7 +113,6 @@ Professional workflow for version control and automated builds.
 ---
 
 ## Module 7: Overrides & Prefab Management
-
 Handling exceptions in the Prefab workflow.
 
 * **The "+" Icon:** Indicates a **Local Override**. The object has modifications specific to *this scene* that are not in the original Prefab.
@@ -162,20 +121,18 @@ Handling exceptions in the Prefab workflow.
 
 ---
 
-## Module 9: Data Persistence (PlayerPrefers)
+## Module 9: Data Persistence (PlayerPrefs)
+Saving simple data (High Score, Settings, Last Position) so it survives after the game closes.
 
-Saving simple data ( High Score, Settings, Last Position) so it survives after the game closes.
-
-| Command | Syntax Example | Mental Model ( Analogy) |
+| Command | Syntax Example | Mental Model (Analogy) |
 | :--- | :--- | :--- | 
-| **Set(Save)** | `PlayerPrefs.SetFloat("Key", Value) ;` | **Writing in the Notebook:** You write down the number so you don't forget. |
-| **Get (Load)** | `PlayerPrefs.GetFloat("Key" Default);` | **Reading the Notebook:** You look for the page "Key". |
-| **Default Value** | `GetFloat("Score", 0 );` | **The Fallback:** if the page is blank (first time playing ), assume the score is 0. |
+| **Set (Save)** | `PlayerPrefs.SetFloat("Key", Value);` | **Writing in the Notebook:** You write down the number so you don't forget. |
+| **Get (Load)** | `PlayerPrefs.GetFloat("Key", Default);` | **Reading the Notebook:** You look for the page "Key". |
+| **Default Value** | `GetFloat("Score", 0);` | **The Fallback:** If the page is blank (first time playing), assume the score is 0. |
 
 ---
 
 ## Module 10: Performance & Optimization
-
 Ensuring the game runs smoothly (Target: 60 FPS).
 
 | Tool | Path | Function | Mental Model (Analogy) |
@@ -190,7 +147,6 @@ Ensuring the game runs smoothly (Target: 60 FPS).
 ---
 
 ## Module 11: Tools & Recording
-
 Essential tools for Game Design documentation.
 
 * **Unity Recorder:** An add-on to record gameplay directly inside the engine without losing quality.
@@ -201,7 +157,6 @@ Essential tools for Game Design documentation.
 ---
 
 ## Module 12: Cinemachine (Camera System)
-
 Advanced camera control without writing code.
 
 | Component | Function | Mental Model (Analogy) |
@@ -215,7 +170,6 @@ Advanced camera control without writing code.
 ---
 
 ## Module 13: Animation Systems
-
 Bringing objects to life via Keyframes, State Machines, or Code.
 
 | Tool | Type | Use Case | Mental Model (Analogy) |
@@ -227,8 +181,7 @@ Bringing objects to life via Keyframes, State Machines, or Code.
 
 ---
 
-## MODULE 14:  WHAT ARE VARIABLES?
-
+## MODULE 14: WHAT ARE VARIABLES?
 **It is a MEMORY ALLOCATION.**
 
 ### Types of Vars
@@ -247,7 +200,7 @@ Bringing objects to life via Keyframes, State Machines, or Code.
 
 ---
 
-###  C# STRUCTURE
+### C# STRUCTURE
 
 1.  **Part 1: The Toolboxes** (`using UnityEngine;`)
 2.  **Part 2: The Badge/ID (Who am I)** (`public class ...`)
@@ -260,8 +213,7 @@ Bringing objects to life via Keyframes, State Machines, or Code.
 
 ---
 
-## # OOP CONCEPT (Object Oriented)
-
+## OOP CONCEPT (Object Oriented)
 **What is it?** One of the goals is to be **SCALABLE**.
 > **"Drawer Organization"**
 
@@ -271,98 +223,4 @@ Class Name {
    - Methods
 };
 
-## 15. Basic Unity Methods (Lifecycle)
-> Based on study notes.
-
-By default, when inheriting from `MonoBehaviour`, we have access to an execution lifecycle:
-
-### Execution Order
-1.  **Awake:** Called **before everything else**, even before Start. It is used to initialize variables or internal references.
-2.  **OnEnable:** Called every time the object is enabled (activated).
-3.  **Start:** Called after Awake and before the first Update. Used for initial logic.
-4.  **Update:** Called **once per frame**. The frequency varies (15 FPS to 60 FPS+). Used for inputs and game logic.
-    * **FixedUpdate:** Working with **Physics**. It is called at fixed intervals, independent of the frame rate.
-    * **LateUpdate:** Called **after** Update. It "waits" for Update to finish. Great for cameras following the player.
-
-### Other Important Methods
-* **OnDisable:** Called every time the object is disabled.
-* **OnDestroy:** Called when the object is destroyed.
-* **Physics:**
-    * `OnCollisionEnter`, `OnCollisionStay`, `OnCollisionExit` (Physics collision).
-    * `OnTriggerEnter`, `OnTriggerStay`, `OnTriggerExit` (Triggers/Sensors).
-
----
-
-## 16. Input System (Detecting Keys)
-How to detect keyboard, mouse, and joystick inputs.
-
-### Reading Types
-We can have various functions with 'n' possibilities. Input is never *Down* and *Up* at the same time.
-
-* `Input.GetKeyDown(KeyCode.Space)`: Returns `true` only in the frame the key **started** being pressed.
-* `Input.GetKeyUp(KeyCode.Space)`: Returns `true` in the frame the key was **released**.
-* `Input.GetKey(KeyCode.Space)`: Returns `true` while the key is being **held**.
-
-### Logical Optimization
-If I received the `Up`, I don't need to check for `Down` in the same frame. Use `else if` to save processing.
-
-```csharp
-if (Input.GetKeyUp(KeyCode.Space))
-{
-    ChangeColor(Color.blue);
-}
-else if (Input.GetKeyDown(KeyCode.Space)) 
-{
-    // Only checks if the above is false
-    ChangeColor(Color.magenta);
-}   
-
-
-## 15. Basic Unity Methods (Lifecycle)
-> Based on study notes.
-
-By default, when inheriting from `MonoBehaviour`, we have access to an execution lifecycle:
-
-### Execution Order
-1.  **Awake:** Called **before everything else**, even before Start. It is used to initialize variables or internal references.
-2.  **OnEnable:** Called every time the object is enabled (activated).
-3.  **Start:** Called after Awake and before the first Update. Used for initial logic.
-4.  **Update:** Called **once per frame**. The frequency varies (15 FPS to 60 FPS+). Used for inputs and game logic.
-    * **FixedUpdate:** Working with **Physics**. It is called at fixed intervals, independent of the frame rate.
-    * **LateUpdate:** Called **after** Update. It "waits" for Update to finish. Great for cameras following the player.
-
-### Other Important Methods
-* **OnDisable:** Called every time the object is disabled.
-* **OnDestroy:** Called when the object is destroyed.
-* **Physics:**
-    * `OnCollisionEnter`, `OnCollisionStay`, `OnCollisionExit` (Physics collision).
-    * `OnTriggerEnter`, `OnTriggerStay`, `OnTriggerExit` (Triggers/Sensors).
-
----
-
-## 16. Input System (Detecting Keys)
-How to detect keyboard, mouse, and joystick inputs.
-
-### Reading Types
-We can have various functions with 'n' possibilities. Input is never *Down* and *Up* at the same time.
-
-* `Input.GetKeyDown(KeyCode.Space)`: Returns `true` only in the frame the key **started** being pressed.
-* `Input.GetKeyUp(KeyCode.Space)`: Returns `true` in the frame the key was **released**.
-* `Input.GetKey(KeyCode.Space)`: Returns `true` while the key is being **held**.
-
-### Logical Optimization
-If I received the `Up`, I don't need to check for `Down` in the same frame. Use `else if` to save processing.
-
-```csharp
-if (Input.GetKeyUp(KeyCode.Space))
-{
-    ChangeColor(Color.blue);
-}
-else if (Input.GetKeyDown(KeyCode.Space)) 
-{
-    // Only checks if the above is false
-    ChangeColor(Color.magenta);
-}
-
-
-```
+´´´
