@@ -270,3 +270,50 @@ Class Name {
    - Attributes
    - Methods
 };
+
+
+## 15. Métodos Básicos da Unity (Lifecycle)
+> Baseado nas anotações de estudo.
+
+Por padrão, ao herdar de `MonoBehaviour`, temos acesso a um ciclo de vida de execução:
+
+### Ordem de Execução
+1.  **Awake:** Chamado **antes de tudo**, antes mesmo do Start. É usado para inicializar variáveis ou referências internas.
+2.  **OnEnable:** Chamado toda vez que o objeto é ligado (ativado).
+3.  **Start:** Chamado após o Awake e antes do primeiro Update. Usado para lógica inicial.
+4.  **Update:** Chamado **1x por frame**. A frequência varia (15 FPS a 60 FPS+). Usado para inputs e lógica de jogo.
+    * **FixedUpdate:** Trabalhar com **Física**. É chamado em intervalos fixos, independente do frame rate.
+    * **LateUpdate:** Chamado **após** o Update. "Ele espera" o Update terminar. Ótimo para câmeras seguirem o jogador.
+
+### Outros Métodos Importantes
+* **OnDisable:** Chamado toda vez que o objeto é desligado.
+* **OnDestroy:** Chamado quando o objeto é destruído.
+* **Física:**
+    * `OnCollisionEnter`, `OnCollisionStay`, `OnCollisionExit` (Colisão física).
+    * `OnTriggerEnter`, `OnTriggerStay`, `OnTriggerExit` (Gatilhos/Sensores).
+
+---
+
+## 16. Input System (Detectando Teclas)
+Como detectar entradas do teclado, mouse e joystick.
+
+### Tipos de Leitura
+Podemos ter várias funções com 'n' possibilidades. O Input nunca é *Down* e *Up* ao mesmo tempo.
+
+* `Input.GetKeyDown(KeyCode.Space)`: Retorna `true` apenas no frame que a tecla **começou** a ser pressionada.
+* `Input.GetKeyUp(KeyCode.Space)`: Retorna `true` no frame que a tecla foi **solta**.
+* `Input.GetKey(KeyCode.Space)`: Retorna `true` enquanto a tecla estiver sendo **segurada**.
+
+### Otimização Lógica
+Se eu recebi o `Up`, eu não preciso verificar o `Down` no mesmo frame. Use `else if` para economizar processamento.
+
+```csharp
+if (Input.GetKeyUp(KeyCode.Space))
+{
+    ChangeColor(Color.blue);
+}
+else if (Input.GetKeyDown(KeyCode.Space)) 
+{
+    // Só verifica se o de cima for falso
+    ChangeColor(Color.magenta);
+}
