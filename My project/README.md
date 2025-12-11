@@ -277,3 +277,49 @@ PlayerPrefs.SetFloat("Position", 10f);
 // Load (Get) - For reuse (Same Name)
 // '0' is the default value (Return in case the position is not found)
 PlayerPrefs.GetFloat("Position", 0);
+
+---
+
+## 6 -  WHAT ARE VARIABLES?
+
+**It is a MEMORY ALLOCATION.**
+
+### Types of Vars
+* `Int Level = 1;` -> Integer (`Int Doors = 4`)
+* `Float Life = 1.0;` -> Floating point, accepts broken numbers.
+    * *C#* -> `Float Name = xf;` (A declaration of a broken value).
+* `Bool HasGun = false;` -> Boolean Logic (True or False).
+
+### Variable Visibility (Types)
+
+| **PRIVATE** | **PUBLIC** | **PROTECTED** |
+| :--- | :--- | :--- |
+| **Not Visible.** | **Visible.** | **Visible only with Inheritance.** |
+| Accessed only by the class itself. | Accessed through all classes. | Only classes that use Inheritance have access. |
+| *Symbol:* `_name` (Underscore -> Way to filter). | | |
+
+---
+
+## # C# STRUCTURE
+
+1.  **Part 1: The Toolboxes** (`using UnityEngine;`)
+2.  **Part 2: The Badge/ID (Who am I)** (`public class ...`)
+    * *File Name and Object Definition.* (The Class name must match the file).
+3.  **Part 3: The Filling (Data and Actions)**
+    * *Everything that happens in the game stays inside brackets `{}`.*
+    * **Functions and Methods:** They are Orders / Instructions.
+    * `Start {}` -> Preparations.
+    * `Update {}` -> Action.
+
+---
+
+## # OOP CONCEPT (Object Oriented)
+
+**What is it?** One of the goals is to be **SCALABLE**.
+> **"Drawer Organization"**
+
+```csharp
+Class Name {
+   - Attributes
+   - Methods
+};
