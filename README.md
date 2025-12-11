@@ -270,3 +270,49 @@ Class Name {
    - Attributes
    - Methods
 };
+
+## 15. Basic Unity Methods (Lifecycle)
+> Based on study notes.
+
+By default, when inheriting from `MonoBehaviour`, we have access to an execution lifecycle:
+
+### Execution Order
+1.  **Awake:** Called **before everything else**, even before Start. It is used to initialize variables or internal references.
+2.  **OnEnable:** Called every time the object is enabled (activated).
+3.  **Start:** Called after Awake and before the first Update. Used for initial logic.
+4.  **Update:** Called **once per frame**. The frequency varies (15 FPS to 60 FPS+). Used for inputs and game logic.
+    * **FixedUpdate:** Working with **Physics**. It is called at fixed intervals, independent of the frame rate.
+    * **LateUpdate:** Called **after** Update. It "waits" for Update to finish. Great for cameras following the player.
+
+### Other Important Methods
+* **OnDisable:** Called every time the object is disabled.
+* **OnDestroy:** Called when the object is destroyed.
+* **Physics:**
+    * `OnCollisionEnter`, `OnCollisionStay`, `OnCollisionExit` (Physics collision).
+    * `OnTriggerEnter`, `OnTriggerStay`, `OnTriggerExit` (Triggers/Sensors).
+
+---
+
+## 16. Input System (Detecting Keys)
+How to detect keyboard, mouse, and joystick inputs.
+
+### Reading Types
+We can have various functions with 'n' possibilities. Input is never *Down* and *Up* at the same time.
+
+* `Input.GetKeyDown(KeyCode.Space)`: Returns `true` only in the frame the key **started** being pressed.
+* `Input.GetKeyUp(KeyCode.Space)`: Returns `true` in the frame the key was **released**.
+* `Input.GetKey(KeyCode.Space)`: Returns `true` while the key is being **held**.
+
+### Logical Optimization
+If I received the `Up`, I don't need to check for `Down` in the same frame. Use `else if` to save processing.
+
+```csharp
+if (Input.GetKeyUp(KeyCode.Space))
+{
+    ChangeColor(Color.blue);
+}
+else if (Input.GetKeyDown(KeyCode.Space)) 
+{
+    // Only checks if the above is false
+    ChangeColor(Color.magenta);
+}
