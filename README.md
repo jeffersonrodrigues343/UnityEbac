@@ -223,7 +223,7 @@ Class Name {
    - Methods
 };
 
-´´´
+```
 
 ---
 
@@ -272,3 +272,5 @@ else if (Input.GetKeyDown(KeyCode.Space))
     // Only checks if the above is false
     ChangeColor(Color.magenta);
 }
+
+```
