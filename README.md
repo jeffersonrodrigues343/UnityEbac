@@ -5,7 +5,7 @@ Here, I apply core concepts of **C#**, **Unity Engine**, and **Game Design** pat
 
 ---
 
-## 🎮 Manipulation Shortcuts (Tools)
+##  Manipulation Shortcuts (Tools)
 Building "muscle memory" for Scene navigation using the **QWERTY** layout:
 
 | Key | Tool | Technical Name | Function |
@@ -35,7 +35,7 @@ Notes on handling basic 3D objects, coordinate systems, and scene illumination.
 
 ![Lighting Notes](./Lights%20on%20and%20shadows.png)
 
-### 🧊 Primitives & Coordinates
+###  Primitives & Coordinates
 * **Primitives:** Basic 3D shapes provided by Unity (Cube, Sphere, Capsule, Plane).
 * **Coordinate Systems (Position):**
     * **Local Space:** Position relative to the **Parent** object (Child/Local).
